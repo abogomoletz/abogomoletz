@@ -1,0 +1,23 @@
+baseURL = 'http://abogomoletz.com/'
+languageCode = 'en-gb'
+title = 'Ashling Bogomoletz'
+theme = 'PaperMod'
+
+[menu]
+[[menu.main]]
+  identifier = 'posts'
+  name = 'Posts'
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/posts/'
+  weight = -110
+  [menu.main.params]
+    class = 'highlight-menu-item'
+
+[[menu.main]]
+  identifier = 'projects'
+  name = 'Projects'
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/projects/'
+  weight = -110
+  [menu.main.params]
+    class = 'highlight-menu-item'
