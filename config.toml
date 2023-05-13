@@ -13,12 +13,3 @@ defaultTheme = "light"
   weight = -110
   [menu.main.params]
     class = 'highlight-menu-item'
-
-[[menu.main]]
-  identifier = 'projects'
-  name = 'Projects'
-  pre = "<i class='fa fa-heart'></i>"
-  url = '/projects/'
-  weight = -110
-  [menu.main.params]
-    class = 'highlight-menu-item'
