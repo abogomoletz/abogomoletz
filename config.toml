@@ -1,6 +1,6 @@
-baseURL = 'http://abogomoletz.com/'
+baseURL = 'http://ashling.codes/'
 languageCode = 'en-gb'
-title = 'Ashling Bogomoletz'
+title = 'Ashling Codes'
 theme = 'PaperMod'
 
 [menu]
