@@ -1,16 +1,22 @@
 ---
 title: "Improve Python Unit Testing with a Helper Package"
 date: 2023-05-04T08:48:23+01:00
+ShowToc: true
+ShowCodeCopyButtons: true
+ShowReadingTime: true
+tags: [Python]
 draft: false
 ---
 
-Using a helper package can help keep your test files organized and focused on testing the actual code. By storing necessary functions and data in a separate `helpers` package, you can reduce clutter and make your tests easier to read and understand. 
 
 {{< details "**TL;DR**" >}}
 - Create a `helpers` folder in `tests` with an `__init__.py`
 - Add a function to the `__init__.py` file to return the path to test data files [resolve_test_data_path](#adding-the-resolve_test_data_path-function)
 - Update [pytest configuration](#updating-the-pytest-configuration) to ignore the helpers folder when searching for tests
 {{< /details >}}
+
+
+Using a helper package can help keep your test files organized and focused on testing the actual code. By storing necessary functions and data in a separate `helpers` package, you can reduce clutter and make your tests easier to read and understand. 
 
 ## Creating the Helpers Package
 
@@ -24,7 +30,7 @@ tests/
 └── conftest.py
 ```
 
-### Adding the `resolve_test_data_path` Function
+## Adding the `resolve_test_data_path` Function
 
 Next, add a function to the `__init__.py` file to return the path to your test data files. This function will be used by your tests to find the data directory:
 
@@ -39,7 +45,7 @@ def resolve_test_data_path(file_name: str):
 
 ```
 
-### Importing the Helpers Package
+## Importing the Helpers Package
 
 To import the `helpers` package in your tests, you'll need to add the path to the `helpers` folder to your `sys.path`. You can do this by adding the following code to your conftest.py file:
 
@@ -54,7 +60,7 @@ sys.path.append(helpers_path)
 
 ```
 
-### Updating the pytest Configuration
+## Updating the pytest Configuration
 
 Finally, you'll need to update your `pytest` configuration to ignore the `helpers` folder when searching for tests. This can be done by adding the following line to your `pyproject.toml` file:
 
@@ -63,7 +69,7 @@ Finally, you'll need to update your `pytest` configuration to ignore the `helper
 norecursedirs = "tests/helpers"
 ```
 
-### Using the Helpers Package
+## Using the Helpers Package
 
 Now that you've created and imported your `helpers` package, you can use it in your tests. For example, you can use the `resolve_test_data_path` function to get the path to a test data file:
 
@@ -84,3 +90,4 @@ def test_can_read_file(fixt_test_data_file):
 ```
 
 Using a `helpers` package can make your test files cleaner, easier to read, and more focused on testing the actual code. You can use the helpers package to contain test data files and definitions of mocked or fake objects.
+

@@ -2,6 +2,7 @@ baseURL = 'http://ashling.codes/'
 languageCode = 'en-gb'
 title = 'Ashling Codes'
 theme = 'PaperMod'
+defaultTheme = "light"
 
 [menu]
 [[menu.main]]
